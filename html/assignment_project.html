@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Our Assignment</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
+
+  <style>
+      .row.content{
+        margin-top: 5%;
+      }
+      body {
+            font-family: 'Cinzel Decorative';font-size: 22px;
+        }
+  </style>
+</head>
+<body>
+<div class="container-fluid     ">    
+  <div class="row content" >
+    <div class="col-sm-8 col-sm-offset-2 "> 
+      <b><p class="text-center" style="font-size: 35px;">Implementation of Tidy and Tidier drawing Algorithms</p></b>
+      <hr>
+    <ul>
+      <li><b class="text-left" style="font-size: 30px;">Line drawing</b></li>
+      
+      <p>Midpoint line drawing algorithm goes as follows: two functions are made handling two cases each. One of them handles the cases if the absolute value of the slope is less than one and the x-coordinate of the first point is less than that of the second point. The other is similar to the first except it handles the cases if the absolute value of the slope is greater than one. Then another function which handles all the cases, exchanges the points if needed and calls the correct function to draw the line.</p>
+      <br>
+      <p> This algorithm is implemented using the class "line".<br>The class is declared in "line.h" and all the member functions have been defined in the file "line.cpp".</p>
+      <B style="font-size: 28px;"> Line class</B><br><br>
+      <ol><b style="font-size: 26px;"> Private elements</b>
+        <li>int <u>sx</u>
+            <t><p>This is the x-coordinate of the starting point of the line.</p></t>
+        </li>
+        <li>int <u>sy</u>
+            <t><p>This is the y-coordinate of the starting point of the line.</p></t>
+        </li>
+        <li>int <u>ex</u>
+            <t><p>This is the x-coordinate of the ending point of the line.</p></t>
+        </li>
+        <li>int <u>ey</u>
+            <t><p>This is the y-coordinate of the ending point of the line.</p></t>
+        </li>
+      </ol>
+      <ol><b style="font-size: 26px;">Public Elements</b><br><br>
+        <li>Constructor
+            <t><p>This is the constructor function of the class "line".It initializes the objects of the class whenever there is an instance of the class in our program. </p></t>
+        </li>
+        <li><u>void draw()</u>
+            <t><p> It calculates the values of the co-ordinates onthe line and renders them with double the width and a black colour.</p></t>
+        </li>
+      </ol>
+      <li><b class="text-left" style="font-size: 30px;">Circle drawing</b></li>
+      
+      <p>Midpoint circle drawing uses the 8-way symmetry from the horizontal and vertical axes as well as the y = x and y = -x axes about the center of the circle. The basic circle drawing algorithmis a bit modified to handle the position (or center) of the circle. Thus the circle drawing calculates all the pixels with respect to the origin but when plotting the pixels, all the pixels are plotted by a shift of the x and y coordinates of the center of the circle which is passed during the call.</p>
+      <br>
+      <p>This algorithm is implemented using the class "circle".<br>The class is declared in "circle.h" and all the member functions have been defined in the file "circle.cpp".</p>
+      <b style="font-size: 28px;">Circle class</b><br><br>
+      <ol><b style="font-size: 26px;">Private Elements</b><br><br>
+        <li>int <u>center_x</u>
+            <t><p>This is the x-coordinate of the center of the circle.</p></t>
+
+        </li>
+        <li>int <u>center_y</u>
+            <t><p>This is the y-coordinate of the center of the circle.</p></t>
+
+        </li>
+        <li>int <u>r</u>
+            <t><p>This is the radius of the circle.</p></t>
+
+        </li>
+        <li><u>void plot_circle(int x, int y, int cx, int cy, int r = 0,int g = 0,int b = 0)</u>
+            <t><p>It takes the input of the coordinates (<u>x,y</u>) , the center of the circle (<u>cx,cy</u>) and the color of the pixel (<u>r,g,b</u>).It calls <u>Plot_Px()</u> to plot the circle in 8-party symmetry. </p></t>
+
+        </li>
+      </ol>
+      <ol><b style="font-size: 26px;">Public Elements</b><br><br>
+        <li><u>Constructor</u>
+            <t><p>This is the constructor of the class circle. It initalizes an object of the class to the center (<u>center_x,center_y</u>) with a radius <u>r</u></p></t>
+        </li>
+        <li><u>void draw()</u>
+            <t><p>This function generates the co-ordinates (x,y) which lie on the circle and calls the function<u>plot_circle()</u> to plot the circle using its's property of 8-way symmetry corresponding to it's center</p></t>
+        </li>
+        <li><u>void plot_circle()</u>
+            <t><p></p></t>
+        </li>
+      </ol>
+      <li><b class="text-left" style="font-size: 30px;">Tree drawing</b></li>
+      <br><br><b style="font-size: 28px;">Tree class</b><br><br>
+      <ol><b style="font-size: 26px;">Private elements</b><br><br>
+        <li><u>node *root</u>
+            <t><p>This is a pointer to the root of the tree</p></t>
+            <ol>Elements of the struct node
+                <li>int <u>data</u>
+                    <t><p>Contains the data</p></t>
+                </li>
+                <li>struct node <u>*left</u>
+                    <t><p>This points to the left child of the node</p></t>
+                </li>
+                <li>struct node <u>*right</u>
+               <t><p>This points to the right child of the node</p></t>
+                </li>
+                <li>struct node <u>*parent</u>
+                    <t><p>This points to the parent of the node</p></t>
+                </li>
+                
+                <li>int <u>level</u>
+                    <t><p>This variable tells us about the level of the node in the binary tree.</p></t>
+                </li>
+                <li>int <u>x</u>
+                    <t><p>This variable contains the x-coordinateof the node</p></t>
+                </li>
+                <li>int <u>y</u>
+                    <t><p>This variable contains the y-coordinateof the node</p></t>
+                </li>
+                <li>int <u>offset</u>
+                    <t><p>Contains the distance to each of the daughters from the parent node.</p></t>
+                </li>
+                <li>bool <u>thread</u>
+                    <t><p>This variable is to check if the thread is active or not.</p></t>
+                </li>
+               
+            </ol>
+        </li>
+        
+        <li><u>void GenBST(vetor <int>& ,int ,int, int)</u>
+            <t><p>This sends an array to the balanced binary tree.</p></t>
+        </li>
+        <li><u>int findHeight(node *N)</u>
+            <t><p>It calculates the height of the binary tree</p></t>
+        </li>
+        <li><u>void iniz(vector <int>&, int n)</u>
+            <t><p>This generates a Binary search Tree from a given input of array. This function is used by the constructor of the class.</p></t>
+        </li>
+        <li><u>void drawTree(int cx, int cy, node *N)</u>
+            <t><p>Draws the Binary tree recursively one child at a time. 
+                This function takes in the values of x and y of the parent node and draws the daughter node
+                as well as the line connecting it with the parent node
+                The function does this recursively for each child of the node
+                No parameters need to be passed when calling it.</p></t>
+        </li>
+      </ol>
+      <ol><b style="font-size: 26px;">Public Elements</b><br><br>
+        <li><u>tree(vector <int>&, int n)</u>
+            <t><p>Tree constructor which will take the number of nodes n and the array which has the data of each node. This constructor comes into use when we want to draw a binary tree defined by the user.</p></t>
+        </li>
+        <li><u>tree(int n, bool balanced)</u>
+            <t><p>Tree constructor which will take the number of nodes n
+                and a boolean value which tells if the tree to be generated is balanced or not.</p></t>
+        </li>
+        <li><u>void Start()</u>
+            <t><p>This function sets up the initial conditions and calls the functions to implement 'TR' algorithm
+                and draws the tree</p></t>
+        </li>
+      </ol>
+        
+    </ul>
+      <hr>
+      
+    </div>
+    
+  </div>
+</div>

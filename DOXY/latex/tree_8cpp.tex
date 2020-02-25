@@ -1,0 +1,90 @@
+\hypertarget{tree_8cpp}{}\section{Computer\+Graphics\+Project/\+Computer\+Graphics\+Project/tree.cpp File Reference}
+\label{tree_8cpp}\index{Computer\+Graphics\+Project/\+Computer\+Graphics\+Project/tree.\+cpp@{Computer\+Graphics\+Project/\+Computer\+Graphics\+Project/tree.\+cpp}}
+{\ttfamily \#include \char`\"{}tree.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Line.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Circle.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$gl/glew.\+h$>$}\newline
+{\ttfamily \#include $<$G\+L/\+G\+L.\+h$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$G\+L/freeglut.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for tree.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tree_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{tree_8cpp_af0b629d98f0b3df05f708edbf99c0728}{rr}~10
+\item 
+\#define \hyperlink{tree_8cpp_a66cb98cee4ec0167b1ed423368bbb86d}{M\+I\+N\+S\+EP}~50
+\item 
+\#define \hyperlink{tree_8cpp_af8dc443bbe421682422f11ce80d943e8}{Y\+S\+C\+A\+LE}~30
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{tree_8cpp_af082905f7eac6d03e92015146bbc1925}{max} (int a, int b)
+\item 
+int \hyperlink{tree_8cpp_a673a4c7055d7c5d2d4f1e736b436340f}{Random\+\_\+num} (int l, int u)
+\item 
+void \hyperlink{tree_8cpp_a30a73c71774dd933ba586eb4e5934e21}{setup\+\_\+tdr} (\hyperlink{structnode}{node} $\ast$root, int level, \hyperlink{structextreme}{extreme} \&rightmost, \hyperlink{structextreme}{extreme} \&leftmost)
+\item 
+void \hyperlink{tree_8cpp_abbdc20412b9c1b9342d701e8f5f9257c}{traverse} (\hyperlink{structnode}{node} $\ast$root, int col)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{tree_8cpp_a66cb98cee4ec0167b1ed423368bbb86d}\label{tree_8cpp_a66cb98cee4ec0167b1ed423368bbb86d}} 
+\index{tree.\+cpp@{tree.\+cpp}!M\+I\+N\+S\+EP@{M\+I\+N\+S\+EP}}
+\index{M\+I\+N\+S\+EP@{M\+I\+N\+S\+EP}!tree.\+cpp@{tree.\+cpp}}
+\subsubsection{\texorpdfstring{M\+I\+N\+S\+EP}{MINSEP}}
+{\footnotesize\ttfamily \#define M\+I\+N\+S\+EP~50}
+
+\mbox{\Hypertarget{tree_8cpp_af0b629d98f0b3df05f708edbf99c0728}\label{tree_8cpp_af0b629d98f0b3df05f708edbf99c0728}} 
+\index{tree.\+cpp@{tree.\+cpp}!rr@{rr}}
+\index{rr@{rr}!tree.\+cpp@{tree.\+cpp}}
+\subsubsection{\texorpdfstring{rr}{rr}}
+{\footnotesize\ttfamily \#define rr~10}
+
+\mbox{\Hypertarget{tree_8cpp_af8dc443bbe421682422f11ce80d943e8}\label{tree_8cpp_af8dc443bbe421682422f11ce80d943e8}} 
+\index{tree.\+cpp@{tree.\+cpp}!Y\+S\+C\+A\+LE@{Y\+S\+C\+A\+LE}}
+\index{Y\+S\+C\+A\+LE@{Y\+S\+C\+A\+LE}!tree.\+cpp@{tree.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+S\+C\+A\+LE}{YSCALE}}
+{\footnotesize\ttfamily \#define Y\+S\+C\+A\+LE~30}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{tree_8cpp_af082905f7eac6d03e92015146bbc1925}\label{tree_8cpp_af082905f7eac6d03e92015146bbc1925}} 
+\index{tree.\+cpp@{tree.\+cpp}!max@{max}}
+\index{max@{max}!tree.\+cpp@{tree.\+cpp}}
+\subsubsection{\texorpdfstring{max()}{max()}}
+{\footnotesize\ttfamily int max (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+Returns the grater number of the two \mbox{\Hypertarget{tree_8cpp_a673a4c7055d7c5d2d4f1e736b436340f}\label{tree_8cpp_a673a4c7055d7c5d2d4f1e736b436340f}} 
+\index{tree.\+cpp@{tree.\+cpp}!Random\+\_\+num@{Random\+\_\+num}}
+\index{Random\+\_\+num@{Random\+\_\+num}!tree.\+cpp@{tree.\+cpp}}
+\subsubsection{\texorpdfstring{Random\+\_\+num()}{Random\_num()}}
+{\footnotesize\ttfamily int Random\+\_\+num (\begin{DoxyParamCaption}\item[{int}]{l,  }\item[{int}]{u }\end{DoxyParamCaption})}
+
+Returns a random number from l to u inclusive \mbox{\Hypertarget{tree_8cpp_a30a73c71774dd933ba586eb4e5934e21}\label{tree_8cpp_a30a73c71774dd933ba586eb4e5934e21}} 
+\index{tree.\+cpp@{tree.\+cpp}!setup\+\_\+tdr@{setup\+\_\+tdr}}
+\index{setup\+\_\+tdr@{setup\+\_\+tdr}!tree.\+cpp@{tree.\+cpp}}
+\subsubsection{\texorpdfstring{setup\+\_\+tdr()}{setup\_tdr()}}
+{\footnotesize\ttfamily void setup\+\_\+tdr (\begin{DoxyParamCaption}\item[{\hyperlink{structnode}{node} $\ast$}]{root,  }\item[{int}]{level,  }\item[{\hyperlink{structextreme}{extreme} \&}]{rightmost,  }\item[{\hyperlink{structextreme}{extreme} \&}]{leftmost }\end{DoxyParamCaption})}
+
+This function finds and evaluates all offsets for drawing the tree which are stored int the node defined in node class \mbox{\Hypertarget{tree_8cpp_abbdc20412b9c1b9342d701e8f5f9257c}\label{tree_8cpp_abbdc20412b9c1b9342d701e8f5f9257c}} 
+\index{tree.\+cpp@{tree.\+cpp}!traverse@{traverse}}
+\index{traverse@{traverse}!tree.\+cpp@{tree.\+cpp}}
+\subsubsection{\texorpdfstring{traverse()}{traverse()}}
+{\footnotesize\ttfamily void traverse (\begin{DoxyParamCaption}\item[{\hyperlink{structnode}{node} $\ast$}]{root,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+This procedures forms the pre-\/order traversal of the tree converting the relative coordinates to absolute coordinates 
