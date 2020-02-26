@@ -1,0 +1,20 @@
+Issues in Coding
+We have defined grid and the exe file  (by gluOrtho2d & glutInitWindowSize respectively) as one of our laptop's screen sizes and as that varies the actual display window size will vary on different screen sizes (technically resolution).
+
+The grid that we have defined is starting at bottom left (being origin and increasing in both directions of the screen) so in order to print the root of the tree in the center we needed to do some tweaking.
+  
+Everytime we resize the window or move it to a new position it renders the entire tree from the beginning. We could solve this by calling a function to clear the screen but we will keep it on the list for additional updates.
+
+General Discussion 
+
+We tried hard coding the tree for specific size and daughters, but then after a lot of issues and frustration we implemented the function for any tree that we can think of by recursion.
+
+It was a pain to actually implement the function to render the individual pixel everytime, and then end the function call, but it was fun to actually learn about all the functions and rendered many other projects on the way.
+
+References
+Tidy and Tidier Drawings of Trees paper and general discussion with other teams.
+
+Time Analysis 
+Included in HTML file.
+	
+
