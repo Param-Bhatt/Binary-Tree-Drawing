@@ -1,0 +1,114 @@
+\hypertarget{classtree}{}\section{tree Class Reference}
+\label{classtree}\index{tree@{tree}}
+
+
+{\ttfamily \#include $<$tree.\+h$>$}
+
+
+
+Collaboration diagram for tree\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{classtree__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtree_a943d10650f183701ae0414689c9b9ee8}{tree} (vector$<$ int $>$ \&, int n)
+\item 
+\hyperlink{classtree_a529a530e3787fdaee02ed65cbf1f17ff}{tree} (int n, bool balanced)
+\item 
+void \hyperlink{classtree_a48edff6ad24225010aa16b36182185d4}{Start} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtree_a5aa82979670b726692fdf9d0df4248de}{Gen\+B\+ST} (vector$<$ int $>$ \&, int, int, int)
+\item 
+int \hyperlink{classtree_ac07199db0ed26e80db1ec481bcba7380}{find\+Height} (\hyperlink{structnode}{node} $\ast$N)
+\item 
+void \hyperlink{classtree_a4dc5cf9375c65041ac594c810072be50}{iniz} (vector$<$ int $>$ \&, int n)
+\item 
+void \hyperlink{classtree_a09613a8cf3f28dfa51dfd06ceeb90fa0}{draw\+Tree} (int cx, int cy, \hyperlink{structnode}{node} $\ast$N)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structnode}{node} $\ast$ \hyperlink{classtree_ad397d4906e47149b98f769b3e81473ee}{root}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtree_a943d10650f183701ae0414689c9b9ee8}\label{classtree_a943d10650f183701ae0414689c9b9ee8}} 
+\index{tree@{tree}!tree@{tree}}
+\index{tree@{tree}!tree@{tree}}
+\subsubsection{\texorpdfstring{tree()}{tree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily tree\+::tree (\begin{DoxyParamCaption}\item[{vector$<$ int $>$ \&}]{input,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+tree constructor which will take the number of nodes n and the array which has the data of each node
+
+tree constructor which takes an input array of n nodes and converts it into a B\+ST \mbox{\Hypertarget{classtree_a529a530e3787fdaee02ed65cbf1f17ff}\label{classtree_a529a530e3787fdaee02ed65cbf1f17ff}} 
+\index{tree@{tree}!tree@{tree}}
+\index{tree@{tree}!tree@{tree}}
+\subsubsection{\texorpdfstring{tree()}{tree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily tree\+::tree (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{bool}]{balanced }\end{DoxyParamCaption})}
+
+tree constructor which will take the number of nodes n and a boolean value which tells if the tree to be generated is balanced or not
+
+tree constructor which will take the number of nodes n and a boolean dataue which tells if the tree to be generated is balanced or not 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtree_a09613a8cf3f28dfa51dfd06ceeb90fa0}\label{classtree_a09613a8cf3f28dfa51dfd06ceeb90fa0}} 
+\index{tree@{tree}!draw\+Tree@{draw\+Tree}}
+\index{draw\+Tree@{draw\+Tree}!tree@{tree}}
+\subsubsection{\texorpdfstring{draw\+Tree()}{drawTree()}}
+{\footnotesize\ttfamily void tree\+::draw\+Tree (\begin{DoxyParamCaption}\item[{int}]{cx = {\ttfamily 0},  }\item[{int}]{cy = {\ttfamily 0},  }\item[{\hyperlink{structnode}{node} $\ast$}]{N = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Draws the Binary tree recursively one child at a time. This function takes in the values of x and y of the parent node and draws the daughter node as well as the line connecting it with the parent node The function does this recursively for each child of the node No parameters need to be passed when calling it
+
+Draws the Binary tree recursively one child at a time. This function takes in the values of x and y of the parent node and draws the daughter node as well as the line connecting it with the parent node. \mbox{\Hypertarget{classtree_ac07199db0ed26e80db1ec481bcba7380}\label{classtree_ac07199db0ed26e80db1ec481bcba7380}} 
+\index{tree@{tree}!find\+Height@{find\+Height}}
+\index{find\+Height@{find\+Height}!tree@{tree}}
+\subsubsection{\texorpdfstring{find\+Height()}{findHeight()}}
+{\footnotesize\ttfamily int tree\+::find\+Height (\begin{DoxyParamCaption}\item[{\hyperlink{structnode}{node} $\ast$}]{N = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Finds the height of the tree \mbox{\Hypertarget{classtree_a5aa82979670b726692fdf9d0df4248de}\label{classtree_a5aa82979670b726692fdf9d0df4248de}} 
+\index{tree@{tree}!Gen\+B\+ST@{Gen\+B\+ST}}
+\index{Gen\+B\+ST@{Gen\+B\+ST}!tree@{tree}}
+\subsubsection{\texorpdfstring{Gen\+B\+S\+T()}{GenBST()}}
+{\footnotesize\ttfamily void tree\+::\+Gen\+B\+ST (\begin{DoxyParamCaption}\item[{vector$<$ int $>$ \&}]{a,  }\item[{int}]{start,  }\item[{int}]{finish,  }\item[{int}]{beg = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Array to Balanced Bianary tree; \mbox{\Hypertarget{classtree_a4dc5cf9375c65041ac594c810072be50}\label{classtree_a4dc5cf9375c65041ac594c810072be50}} 
+\index{tree@{tree}!iniz@{iniz}}
+\index{iniz@{iniz}!tree@{tree}}
+\subsubsection{\texorpdfstring{iniz()}{iniz()}}
+{\footnotesize\ttfamily void tree\+::iniz (\begin{DoxyParamCaption}\item[{vector$<$ int $>$ \&}]{input,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Generates a B\+ST from a given input array It is used by constructor
+
+This is an private function which generates a B\+ST from a given input array It is used by constructor calls \mbox{\Hypertarget{classtree_a48edff6ad24225010aa16b36182185d4}\label{classtree_a48edff6ad24225010aa16b36182185d4}} 
+\index{tree@{tree}!Start@{Start}}
+\index{Start@{Start}!tree@{tree}}
+\subsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void tree\+::\+Start (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This function sets up the initial conditions and calls the functions to implement \textquotesingle{}TR\textquotesingle{} algorithm and draws the tree
+
+This function sets up the initial conditions and calls the functions to implement \textquotesingle{}TR\textquotesingle{} algorithm and draws the tree. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classtree_ad397d4906e47149b98f769b3e81473ee}\label{classtree_ad397d4906e47149b98f769b3e81473ee}} 
+\index{tree@{tree}!root@{root}}
+\index{root@{root}!tree@{tree}}
+\subsubsection{\texorpdfstring{root}{root}}
+{\footnotesize\ttfamily \hyperlink{structnode}{node}$\ast$ tree\+::root\hspace{0.3cm}{\ttfamily [private]}}
+
+Points to the root of the tree. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Computer\+Graphics\+Project/\+Computer\+Graphics\+Project/\hyperlink{tree_8h}{tree.\+h}\item 
+Computer\+Graphics\+Project/\+Computer\+Graphics\+Project/\hyperlink{tree_8cpp}{tree.\+cpp}\end{DoxyCompactItemize}
